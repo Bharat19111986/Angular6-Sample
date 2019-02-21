@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.dev.js",
-    "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'src/app/**/*.js' ''src/*.js'' 'src/app/**/*.ngfactory.ts' 'src/app/**/*.js.map' 'src/app/**/*.shim.ts' 'src/app/**/*.ngsummary.json' 'src/*.ngsummary.json' 'src/app/**/*.ngstyle.ts' 'dist/app' 'src/polyfills.ngsummary.json'",
+    "build": "webpack-dev-server --inline --progress --port 8080 --config webpack.config.dev.js",
+    "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'src/app/**/*.js' ''src/*.js'' 'src/app/**/*.ngfactory.ts' 'src/app/**/*.js.map' 'src/app/**/*.shim.ts' 'src/app/**/*.ngsummary.json' 'src/*.ngsummary.json' 'src/app/**/*.ngstyle.ts' 'dist/app' 'src/polyfills.ngsummary.json' 'polyfills.js' 'main.js' 'main.aot.js' 'main.ngsummary.json' 'main.aot.ngsummary.json' 'polyfills.ngsummary.json' ",
     "serve": "lite-server"
   },
   "author": "Bharat Bhaskar",
@@ -42,7 +42,7 @@
     "html-webpack-plugin": "^3.2.0",
     "lite-server": "^2.4.0",
     "raw-loader": "^1.0.0",
-    "typescript": "^3.2.2",
+    "typescript": "3.1.6",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14",

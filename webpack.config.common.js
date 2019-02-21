@@ -2,7 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
 module.exports={
-    entry: './src/app/main.ts',
+    entry: './main.ts',
     resolve:{
         extensions: ['.js','.ts']
     },
@@ -22,7 +22,7 @@ module.exports={
 
     plugins: [
         new HtmlWebpackPlugin({
-            template:'src/index.html'
+            template:'index.html'
         })
     ]
 }

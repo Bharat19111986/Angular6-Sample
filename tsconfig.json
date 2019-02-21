@@ -27,6 +27,7 @@
 */
 
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
